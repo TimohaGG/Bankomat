@@ -1,4 +1,13 @@
+#include"DataBase.h"
 
-int main() {
+int main() 
+{
+	
+	DataBese obj;
+
+	obj.LoadFromFile();
+
+	obj.SaveToFile();
+
 
 }

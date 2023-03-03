@@ -13,5 +13,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="DataBase.cpp">
+      <Filter>Core\cpps</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataBase.h">
+      <Filter>Core\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
