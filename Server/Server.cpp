@@ -20,7 +20,7 @@ public:
 	bool ReduceBalance(int amount, UserData user)// Ïðîâåðêà âîçìîæíîñòè ñíÿòèÿ áàëàíñà è ïåðåçàïèñü ñóììû, â ñëó÷àå true
 	{
 
-		if (this->getBalance(user) => amount)
+		if (this->getBalance(user) >= amount)
 		{
 			db.reduceBalance(amount);
 			return true;
