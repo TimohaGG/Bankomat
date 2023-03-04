@@ -1,4 +1,4 @@
-﻿#include "class_Bankomat.h"
+﻿#include "Core/Headers/Bankomat.h"
 
 void Bankomat::Login(UserData user)
 {
@@ -6,7 +6,7 @@ void Bankomat::Login(UserData user)
 
 	//cout << "Введите пароль: ";
 	cout << "Enter password: ";
-	cin >> card.password;
+	cin >> card.Pass;
 
 	system("cls");
 

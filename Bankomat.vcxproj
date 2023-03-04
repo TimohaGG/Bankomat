@@ -128,14 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bankomat.cpp" />
-    <ClCompile Include="Core\cpps\User.cpp" />
-    <ClCompile Include="Core\cpps\UserData.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Server\Server.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Headers\Bankomat.h" />
     <ClInclude Include="Core\Headers\User.h" />
     <ClInclude Include="Core\Headers\UserData.h" />
+    <ClInclude Include="Server\Server.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

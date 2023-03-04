@@ -16,10 +16,7 @@
     <ClCompile Include="Bankomat.cpp">
       <Filter>Core\cpps</Filter>
     </ClCompile>
-    <ClCompile Include="Core\cpps\User.cpp">
-      <Filter>Core\cpps</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\cpps\UserData.cpp">
+    <ClCompile Include="Server\Server.cpp">
       <Filter>Core\cpps</Filter>
     </ClCompile>
   </ItemGroup>
@@ -31,6 +28,9 @@
       <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\Headers\Bankomat.h">
+      <Filter>Core\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Server.h">
       <Filter>Core\Headers</Filter>
     </ClInclude>
   </ItemGroup>
