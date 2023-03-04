@@ -7,28 +7,22 @@
 class Server
 {
 private:
-
 	Database db;
-
 public:
-
-	bool SendToDB(UserData user)//Ïåðåäà÷à äàííûõ ïîëüçîâàòåëÿ íà áàçó äàííûõ, äëÿ ïðîâåðêè è ñðàâíåíèÿ ïîëüçîâàòåëÿ
+	bool SendToDB(UserData user)//ÃÃ¥Ã°Ã¥Ã¤Ã Ã·Ã  Ã¤Ã Ã­Ã­Ã»Ãµ Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã²Ã¥Ã«Ã¿ Ã­Ã  Ã¡Ã Ã§Ã³ Ã¤Ã Ã­Ã­Ã»Ãµ, Ã¤Ã«Ã¿ Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ¨ Ã¨ Ã±Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã¿ Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã²Ã¥Ã«Ã¿
 	{
 		return db.checkUser(user);
 	};
-
-	int GetBalance(UserData user)//Çàïðîñ áàëàíñà è âîçâðàò áàëàíñà ïîëþçîâàòåëþ
+	int GetBalance(UserData user)//Ã‡Ã Ã¯Ã°Ã®Ã± Ã¡Ã Ã«Ã Ã­Ã±Ã  Ã¨ Ã¢Ã®Ã§Ã¢Ã°Ã Ã² Ã¡Ã Ã«Ã Ã­Ã±Ã  Ã¯Ã®Ã«Ã¾Ã§Ã®Ã¢Ã Ã²Ã¥Ã«Ã¾
 	{
 		return db.giveBalance(user);
 	};
-
-	bool ReduceBalance(int amount)// Ïðîâåðêà âîçìîæíîñòè ñíÿòèÿ áàëàíñà è ïåðåçàïèñü ñóììû, â ñëó÷àå true
+	bool ReduceBalance(int amount, UserData user)// ÃÃ°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã¢Ã®Ã§Ã¬Ã®Ã¦Ã­Ã®Ã±Ã²Ã¨ Ã±Ã­Ã¿Ã²Ã¨Ã¿ Ã¡Ã Ã«Ã Ã­Ã±Ã  Ã¨ Ã¯Ã¥Ã°Ã¥Ã§Ã Ã¯Ã¨Ã±Ã¼ Ã±Ã³Ã¬Ã¬Ã», Ã¢ Ã±Ã«Ã³Ã·Ã Ã¥ true
 	{
 
-		if (this->getBalance() = > amount)
+		if (this->getBalance(user) => amount)
 		{
 			db.reduceBalance(amount);
-
 			return true;
 		}
 		else
