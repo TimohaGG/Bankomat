@@ -8,7 +8,7 @@
 #include<algorithm>
 #include<time.h>
 
-struct UserData
+struct UserData // Удалить данную структуру при сборке
 {
 	int id;
 	int Pass;
@@ -94,7 +94,10 @@ private:
 		return count;
 	}
 
-public:
+public: 
+
+	/*Методы отвечающие за запись до итоговой сборки являются открытыми, 
+	при финальной редакции данные методы необходимо закрыть, если в этом будет необходимость.*/
 
 	void LoadFromFile() // Чтение файла
 	{
@@ -217,10 +220,63 @@ public:
 			}
 			SvFl.close();
 		}
-
 	}
 
-	
+	bool CheckUser(UserData user)
+	{
+		int length = NumUser(); // Устанавливаем количество пользователей
 
+		for (size_t i = 0; i < length; i++) // Совершаем сравнение, для упрощение задачи, сначала сравниваем id, если id совпали проверяем пароль
+		{
+			if (users[i].id  == user.id)
+			{
+				if (users[i].Pass == user.Pass)
+				{
+					return true;
+				}
+				
+			}
+		}
+
+		return false;
+	}
+
+	int GiveBalabce(UserData user)
+	{
+		int length = NumUser(); // Устанавливаем количество пользователей
+
+		for (size_t i = 0; i < length; i++) // Совершаем сравнение, в случае успеха возвращаем баланс
+		{
+			if (users[i].id == user.id)
+			{
+				if (users[i].Pass == user.Pass)
+				{
+					return users[i].Balance;
+				}
+
+			}
+		}
+
+		return 0;
+	}
+
+	void ReduceBalance(int amount, UserData user)
+	{
+		int length = NumUser(); // Устанавливаем количество пользователей
+
+		for (size_t i = 0; i < length; i++) // Совершаем сравнение
+		{
+			if (users[i].id == user.id)
+			{
+				if (users[i].Pass == user.Pass)
+				{
+					users[i].Balance -= amount; // уменьшаем баланс
+				}
+
+			}
+		}
+
+		SaveToFile(); //Производим перезапись файла для актуализации данных
+	}
 
 };
