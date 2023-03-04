@@ -13,5 +13,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="class_Bankomat.cpp">
+      <Filter>Core\cpps</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="class_Bankomat.h">
+      <Filter>Core\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
