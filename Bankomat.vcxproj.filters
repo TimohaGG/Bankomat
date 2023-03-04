@@ -13,12 +13,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="class_Bankomat.cpp">
+    <ClCompile Include="Bankomat.cpp">
+      <Filter>Core\cpps</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\cpps\User.cpp">
+      <Filter>Core\cpps</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\cpps\UserData.cpp">
       <Filter>Core\cpps</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="class_Bankomat.h">
+    <ClInclude Include="Core\Headers\User.h">
+      <Filter>Core\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Headers\UserData.h">
+      <Filter>Core\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Headers\Bankomat.h">
       <Filter>Core\Headers</Filter>
     </ClInclude>
   </ItemGroup>

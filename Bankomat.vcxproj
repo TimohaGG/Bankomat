@@ -127,11 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="class_Bankomat.cpp" />
+    <ClCompile Include="Bankomat.cpp" />
+    <ClCompile Include="Core\cpps\User.cpp" />
+    <ClCompile Include="Core\cpps\UserData.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="class_Bankomat.h" />
+    <ClInclude Include="Core\Headers\Bankomat.h" />
+    <ClInclude Include="Core\Headers\User.h" />
+    <ClInclude Include="Core\Headers\UserData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
